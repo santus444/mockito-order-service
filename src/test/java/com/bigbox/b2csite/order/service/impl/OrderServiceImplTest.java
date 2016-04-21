@@ -11,17 +11,18 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import javax.persistence.criteria.Order;
 import java.util.LinkedList;
 import java.util.List;
 
 public class OrderServiceImplTest {
+    private final static long CUSTOMER_ID = 1L;
+    //Using Mock annotaions to mock
     protected @Mock OrderDao mockOrderDao;
     protected @Mock OrderEntityToOrderSummaryTransformer mockTransformer;
-    private final static long CUSTOMER_ID = 1L;
 
     @Before
     public void setup(){
+        //Initializing Mock objects
         MockitoAnnotations.initMocks(this);
     }
     @Test
